@@ -1,6 +1,9 @@
 # Airflow local setup
+[<img src="https://img.shields.io/badge/Airflow-2.2.5-blue.svg?logo=LOGO">](https://airflow.apache.org/docs/apache-airflow/stable/start/local.html)
 
-Light setup to setup a local airflow instance..
+Quick setup for a local airflow instance.
+
+> Only for development usage
 
 ## Installation
 Activate a virtual environment
@@ -24,10 +27,11 @@ export AIRFLOW_HOME=pwd
 AIRFLOW_VERSION=2.2.5
 PYTHON_VERSION="$(python --version | cut -d " " -f 2 | cut -d "." -f 1-2)"
 CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
-pip install "apache-airflow[async,postgres,google]==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
+pipenv install "apache-airflow[async,postgres,google]==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
 
 # or 
-bash install.sh
+chmod +x install.sh
+./install.sh
 ```
 
 ## Run airflow

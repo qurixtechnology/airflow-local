@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir -p ./logs ./dags ./plugins
+
 # Set to current dir
 export AIRFLOW_HOME=pwd
 
