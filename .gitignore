@@ -1,0 +1,18 @@
+# local files and configs
+/dags
+/logs
+./plugins
+
+# .venv
+.venv
+
+# local Airflow
+webserver_config.py
+standalone_admin_password.txt
+airflow.cfg
+airflow.db
+airflow-webserver.pid
+
+# Pipfile
+Pipfile
+Pipfile.lock
