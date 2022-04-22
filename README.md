@@ -9,10 +9,13 @@ Quick setup for a local airflow instance.
 Activate a virtual environment
 
 ```bash
-pip install pipenv
-mkdir .venv
-pipenv shell
+python -m virtualenv .venv
 ```
+
+Activate it
+
+```bash
+source .venv/bin/activate
 
 Create the airflow folders
 
