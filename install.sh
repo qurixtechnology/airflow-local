@@ -3,7 +3,7 @@
 mkdir -p ./logs ./dags ./plugins
 
 # Set to current dir
-export AIRFLOW_HOME=pwd
+export AIRFLOW_HOME=$(pwd)
 
 # Install
 AIRFLOW_VERSION=2.2.5

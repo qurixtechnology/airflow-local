@@ -16,6 +16,7 @@ Activate it
 
 ```bash
 source .venv/bin/activate
+```
 
 Create the airflow folders
 
@@ -26,7 +27,8 @@ mkdir -p ./logs ./dags ./plugins
 Install airflow, example version 2.2.5:
 
 ```bash
-export AIRFLOW_HOME=pwd
+# If you do not set this, airflow will set his home at the default "~/" directory:
+export AIRFLOW_HOME=$(pwd)
 AIRFLOW_VERSION=2.2.5
 PYTHON_VERSION="$(python --version | cut -d " " -f 2 | cut -d "." -f 1-2)"
 CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
